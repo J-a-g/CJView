@@ -1,4 +1,4 @@
-package com.jag.sj.horizontalview;
+package com.example.sj.cjhorizontalview;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

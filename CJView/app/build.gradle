@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+    enforceUniquePackageName = false
     defaultConfig {
         applicationId "com.jag.sj.cjview"
         minSdkVersion 15
