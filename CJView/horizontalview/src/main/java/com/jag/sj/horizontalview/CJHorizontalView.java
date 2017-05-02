@@ -142,14 +142,18 @@ public class CJHorizontalView extends BaseView implements CJViewInterface {
                 if (tag == TAG_OPENING) {
                     int tmp = menuViewWidth + getScrollX();
                     if (dx > 0 ) {
-                        callBack2View.opening();
+                        if(callBack2View != null) {
+                            callBack2View.opening();
+                        }
                         dx = dx > tmp ? tmp : dx;
                         scrollBy(-dx, 0);
                     }
                 } else if (tag == TAG_CLOSING) {
                     dx = dx > getScrollX() ? dx : getScrollX();
                     if (dx < 0 ) {
-                        callBack2View.closing();
+                        if(callBack2View != null) {
+                            callBack2View.closing();
+                        }
                         scrollBy(-dx, 0);
                     }
                 }
@@ -198,7 +202,9 @@ public class CJHorizontalView extends BaseView implements CJViewInterface {
 
     private void smoothScroll(int dx ,int flag) {
         scroller.startScroll(getScrollX(), 0, dx, 0, animationTime);
-        updateStatus(flag);
+        if(callBack2View != null) {
+            updateStatus(flag);
+        }
         invalidate();
     }
 
