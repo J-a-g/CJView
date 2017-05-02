@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jag.sj.cjview.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <com.jag.sj.horizontalview.CJHorizontalView
+        android:id="@+id/cjhorizontalview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jag.sj.horizontalview.CJMenuView
+            android:layout_width="270dp"
+            android:background="#12ff54"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="btn1"
+                />
+
+        </com.jag.sj.horizontalview.CJMenuView>
+        <com.jag.sj.horizontalview.CJMainView
+            android:layout_width="match_parent"
+            android:background="#88aa00"
+            android:gravity="bottom"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="open"
+                />
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="btn2"/>
+
+        </com.jag.sj.horizontalview.CJMainView>
+    </com.jag.sj.horizontalview.CJHorizontalView>
+</LinearLayout>
