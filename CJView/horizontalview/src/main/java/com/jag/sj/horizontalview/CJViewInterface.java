@@ -8,6 +8,8 @@ public interface CJViewInterface {
 
     void setCallBack2View(CJHorizontalView.CallBack2View callBack2View);
 
+    void setIsScroll(boolean isScroll);
+
     int getViewStatus();
 
     void closeMenuView();

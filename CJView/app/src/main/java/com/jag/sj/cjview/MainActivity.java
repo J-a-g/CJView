@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements CJHorizontalView.
         setContentView(R.layout.activity_main);
         final CJViewInterface cjViewInterface = (CJViewInterface) findViewById(R.id.cjhorizontalview);
         cjViewInterface.setCallBack2View(this);
+        ///cjViewInterface.setIsScroll(false);
         Button button = (Button) findViewById(R.id.btn1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,21 @@ public class MainActivity extends AppCompatActivity implements CJHorizontalView.
             @Override
             public void onClick(View view) {
                 cjViewInterface.openMenuView();
+            }
+        });
+
+        Button btn_true = (Button)findViewById(R.id.btn_true);
+        btn_true.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cjViewInterface.setIsScroll(true);
+            }
+        });
+        Button btn_false = (Button)findViewById(R.id.btn_false);
+        btn_false.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cjViewInterface.setIsScroll(false);
             }
         });
     }

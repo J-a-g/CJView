@@ -12,6 +12,8 @@ public abstract class BaseView extends ViewGroup {
 
     protected int animationTime = 500;
 
+    protected boolean isScroll = true;
+
     abstract void setAnimationTime(int time);
 
     public BaseView(Context context) {

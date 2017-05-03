@@ -108,16 +108,18 @@ public class CJHorizontalView extends BaseView implements CJViewInterface {
         }
         nlastYintercept = y;
         nlastXintercept = x;
+        if(!isScroll){
+            intercepted = false;
+        }
         Log.v("tag", "CJHorizontalView intercepted --->" + intercepted);
         return intercepted;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
+        Log.v("tag", "CJHorizontalView onTouchEvent..");
         int x = (int) event.getX();
         int y = (int) event.getY();
-
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 /*if(!scroller.isFinished()){
@@ -229,6 +231,11 @@ public class CJHorizontalView extends BaseView implements CJViewInterface {
     @Override
     public void setCallBack2View(CallBack2View callBack2View) {
         this.callBack2View = callBack2View;
+    }
+
+    @Override
+    public void setIsScroll(boolean isScroll) {
+        this.isScroll = isScroll;
     }
 
     @Override
